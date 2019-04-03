@@ -1,14 +1,16 @@
 # 5. В массиве найти максимальный отрицательный элемент. Вывести на экран его значение и позицию (индекс) в массиве.
 import random as r
-
-
-a = [r.randint(-100, 50) for i in range(15)]
+import math
+a = [-69, -42, -2, 45, -4, 24, -36, -53, 34, 9, -68, -63, 42, -88, -5]
+# a = [r.randint(-100, 50) for i in range(15)]
 print(a)
-mn = 0
+mn = -math.inf
 for i in a:
-    if i < 0 and i < mn:
+    if 0 > i > mn:
         mn = i
-print(f'Минимальный элемент {mn}, его индекс {a.index(mn)}')
+        if mn == -1:
+            break
+print(f'Максимальный отрицательный элемент {mn}, его индекс {a.index(mn)}')
 
 
 
