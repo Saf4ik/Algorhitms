@@ -9,7 +9,7 @@ c = int(input("Длина отрезка CA: "))
 
 if a < b + c and b < a + c and c < a + b:
     print("Из этих длин сторон треугольник возможен")
-    if a == b and a == c and b == c:
+    if a == b and b == c:
         print("Он равносторонний")
     elif a == b or a == c or b == c:
         print("Он равнобедренный")
